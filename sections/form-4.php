@@ -1,8 +1,3 @@
-<head>
-    <link rel="stylesheet" href="assets/styles/style-form.css">
-    <link rel="stylesheet" href="assets/styles/style-form-4.css">
-</head>
-
 
 <!-- <div class="form-3-move-up"> -->
 <div class="mt-5">
@@ -18,7 +13,7 @@
             </div>
         </div>
         <div class="row f-row mt-5">
-            <div class="resume-box ml-3 text-center">
+            <div class="resume-box ml-md-3 text-center">
                 <span class="text-capitalize">
                     resume upload
                     <i class="fa-solid fa-arrow-up-from-bracket"></i>

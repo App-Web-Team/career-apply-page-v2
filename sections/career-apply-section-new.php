@@ -2,10 +2,10 @@
     <link rel="stylesheet" href="assets/styles/style-career-apply-new.css">
 </head>
 
-<div class="container">
+<div class="container pb-5">
     <div class="row justify-content-center">
         <!-- side icons tab -->
-        <div class="col-md-3 col-lg-2 pr-0">
+        <div class="col-md-3 col-lg-2 p-0">
             <div class="side-icons line d-flex justify-content-center flex-md-column">
                 <div class="px-sm-4 py-4 first-icon active">
                     <span class="fa-stack fa-2x">

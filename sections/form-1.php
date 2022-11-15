@@ -1,6 +1,3 @@
-<head>
-    <link rel="stylesheet" href="assets/styles/style-form-1.css">
-</head>
 
 <!-- <div class="form-1"> -->
 <div class="">

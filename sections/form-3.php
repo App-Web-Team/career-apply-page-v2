@@ -1,7 +1,3 @@
-<head>
-    <link rel="stylesheet" href="assets/styles/style-form.css">
-    <link rel="stylesheet" href="assets/styles/style-form-3.css">
-</head>
 
 <!-- <div class="form-3-move-up"> -->
 <div class="mt-5">
