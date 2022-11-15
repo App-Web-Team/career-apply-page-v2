@@ -43,10 +43,10 @@
     </div>
 </nav>
 
-<script>
+<!-- <script>
     window.onscroll = () => {
         const nav = document.querySelector('#scroll-nav');
         if (this.scrollY <= 10) nav.className = 'navbar navbar-expand-lg navbar-dark';
         else nav.className = 'navbar navbar-expand-lg navbar-dark scroll fixed-top';
     };
-</script>
+</script> -->

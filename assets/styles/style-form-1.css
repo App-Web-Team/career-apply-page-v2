@@ -26,7 +26,7 @@ input:not(.not-apply) {
 }
 
 input:focus {
-    border-bottom: solid 2px var(--secondary-color); 
+    border-bottom: solid 2px var(--secondary-color);
 }
 
 input:not(.not-apply):focus~label,
@@ -38,4 +38,10 @@ input:not(.not-apply):valid~label {
 
 .col {
     height: 20px;
+}
+
+@media screen and (max-width: 576px) {
+    label:not(.not-apply) {
+        font-size: 14px;
+    }
 }

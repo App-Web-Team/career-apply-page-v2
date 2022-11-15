@@ -6,9 +6,6 @@
 
 <!-- <div class="form-3-move-up"> -->
 <div class="mt-5">
-    <p class="details-heading experience-text text-capitalize">
-        experience grounds
-    </p>
     <form action="">
         <div class="row f-row mt-5">
             <div class="col">
@@ -38,7 +35,7 @@
             </div>
         </div>
         <div class="text-center">
-            <button class="first next">Save & Proceed</button>
+            <button class="last next">Save & Proceed</button>
         </div>
 
     </form>

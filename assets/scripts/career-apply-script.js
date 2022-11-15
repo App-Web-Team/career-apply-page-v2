@@ -1,64 +1,37 @@
 
-var $question = $(".question");
-var $questionval;
-var $tags = $(".tags");
-var tagsval;
-var $yourquestion = $(".yourquestion");
-var $yourtags = $(".yourtags");
-
-// The first button will be clicked after the user enters a question
 $(".first").click(function (event) {
-    $questionval = $question.val();
-    if ($questionval == "") {
-        $yourquestion.html("No Question.");
-    } else {
-        $yourquestion.html($questionval);
-    }
-
-    // $(".container").removeClass("fourth-dot initial-active-area");
-    $(".container").addClass("second-dot second-active-area");
 
     $(".side-icons div:first").removeClass("first-icon active");
     $(".side-icons div:nth-child(2)").addClass("second-icon active");
 
+    $(".wrapper > div:nth-child(1)").addClass("form-1-move-down");
+    $(".wrapper > div:nth-child(2)").addClass("form-2-move-up");
+
     // Stop the button from performing it's default task
     event.preventDefault();
 });
 
-// The second button will be clicked after the user enters some tags (not required)
+
 $(".second").click(function (event) {
-    $(".container").removeClass("second-dot second-active-area initial-active-area");
-    $(".container").addClass("third-dot third-active-area");
 
     $(".side-icons div:nth-child(2)").removeClass("second-icon active");
     $(".side-icons div:nth-child(3)").addClass("third-icon active");
 
-    $tagsval = $tags.val();
-    // Check if the value of tags field is empty
-    if ($tagsval == "") {
-        $yourtags.html("No tags.");
-    } else {
-        $yourtags.html($tagsval);
-    }
-    // Stop the button from performing it's default task
+    $(".wrapper > div:nth-child(2)").removeClass("form-2-move-up");
+    $(".wrapper > div:nth-child(3)").addClass("form-3-move-up");
+
+
     event.preventDefault();
 });
 
 $(".third").click(function (event) {
-    $(".container").removeClass("third-dot third-active-area");
-    $(".container").addClass("fourth-dot fourth-active-area");
 
     $(".side-icons div:nth-child(3)").removeClass("third-icon active");
     $(".side-icons div:nth-child(4)").addClass("fourth-icon active");
 
-    $tagsval = $tags.val();
-    // Check if the value of tags field is empty
-    if ($tagsval == "") {
-        $yourtags.html("No tags.");
-    } else {
-        $yourtags.html($tagsval);
-    }
-    // Stop the button from performing it's default task
+    $(".wrapper > div:nth-child(3)").removeClass("form-3-move-up");
+    $(".wrapper > div:nth-child(4)").addClass("form-4-move-up");
+
     event.preventDefault();
 });
 

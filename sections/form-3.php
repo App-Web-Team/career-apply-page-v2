@@ -49,11 +49,11 @@
                 <label>provided by</label>
             </div>
         </div>
-        <div class="row f-row my-0">
+        <div class="row f-row my-0 mb-3">
             <button class="btn add-btn text-capitalize ml-3">+ add</button>
         </div>
         <div class="text-center">
-            <button class="first next">Save & Proceed</button>
+            <button class="third next">Save & Proceed</button>
         </div>
     </form>
 </div>
