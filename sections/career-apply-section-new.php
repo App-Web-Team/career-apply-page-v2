@@ -7,32 +7,39 @@
         <!-- side icons tab -->
         <div class="col-md-3 col-lg-2 p-0">
             <div class="side-icons line d-flex justify-content-center flex-md-column">
-                <div class="px-sm-4 py-4 first-icon active">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x text-white"></i>
-                        <i class="fa-solid fa-user fa-stack-1x"></i>
-                    </span>
-                </div>
+                <button class="zero first-icon active">
+                    <div class="px-sm-4 py-4">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x text-white"></i>
+                            <i class="fa-solid fa-user fa-stack-1x"></i>
+                        </span>
+                    </div>
+                </button>
 
-                <div class="px-sm-4 py-4 second-icon">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x text-white"></i>
-                        <i class="fa-solid fa-graduation-cap fa-stack-1x"></i>
-                    </span>
-                </div>
-
-                <div class="px-sm-4 py-4 third-icon">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x text-white"></i>
-                        <i class="fa-solid fa-briefcase fa-stack-1x"></i>
-                    </span>
-                </div>
-                <div class="px-sm-4 py-4 fourth-icon">
-                    <span class="fa-stack fa-2x">
-                        <i class="fa fa-circle fa-stack-2x text-white"></i>
-                        <i class="fa-solid fa-thumbs-up fa-stack-1x"></i>
-                    </span>
-                </div>
+                <button class="first second-icon">
+                    <div class="px-sm-4 py-4 ">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x text-white"></i>
+                            <i class="fa-solid fa-graduation-cap fa-stack-1x"></i>
+                        </span>
+                    </div>
+                </button>
+                <button class="second third-icon">
+                    <div class="px-sm-4 py-4 ">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x text-white"></i>
+                            <i class="fa-solid fa-briefcase fa-stack-1x"></i>
+                        </span>
+                    </div>
+                </button>
+                <button class="third fourth-icon">
+                    <div class="px-sm-4 py-4 ">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x text-white"></i>
+                            <i class="fa-solid fa-thumbs-up fa-stack-1x"></i>
+                        </span>
+                    </div>
+                </button>
             </div>
         </div>
         <!-- wrapper col -->

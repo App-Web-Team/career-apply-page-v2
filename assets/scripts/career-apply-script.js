@@ -1,11 +1,31 @@
 
+$(".zero").click(function (event) {
+
+    $(".side-icons > button:first").addClass("active");
+    $(".side-icons > button:nth-child(2)").removeClass("active");
+    $(".side-icons button:nth-child(3)").removeClass("active");
+    $(".side-icons button:nth-child(4)").removeClass("active");
+
+    $(".wrapper > div:nth-child(1)").removeClass("form-1-move-down");
+    $(".wrapper > div:nth-child(2)").removeClass("form-2-move-up");
+    $(".wrapper > div:nth-child(3)").removeClass("form-3-move-up");
+    $(".wrapper > div:nth-child(4)").removeClass("form-4-move-up");
+
+    // Stop the button from performing it's default task
+    event.preventDefault();
+});
+
 $(".first").click(function (event) {
 
-    $(".side-icons div:first").removeClass("first-icon active");
-    $(".side-icons div:nth-child(2)").addClass("second-icon active");
+    $(".side-icons > button:first").removeClass("active");
+    $(".side-icons > button:nth-child(2)").addClass("active");
+    $(".side-icons button:nth-child(3)").removeClass("active");
+    $(".side-icons button:nth-child(4)").removeClass("active");
 
     $(".wrapper > div:nth-child(1)").addClass("form-1-move-down");
     $(".wrapper > div:nth-child(2)").addClass("form-2-move-up");
+    $(".wrapper > div:nth-child(3)").removeClass("form-3-move-up");
+    $(".wrapper > div:nth-child(4)").removeClass("form-4-move-up");
 
     // Stop the button from performing it's default task
     event.preventDefault();
@@ -14,11 +34,16 @@ $(".first").click(function (event) {
 
 $(".second").click(function (event) {
 
-    $(".side-icons div:nth-child(2)").removeClass("second-icon active");
-    $(".side-icons div:nth-child(3)").addClass("third-icon active");
+    $(".side-icons button:nth-child(1)").removeClass("active");
+    $(".side-icons button:nth-child(2)").removeClass("active");
+    $(".side-icons button:nth-child(3)").addClass("active");
+    $(".side-icons button:nth-child(4)").removeClass("active");
 
+
+    $(".wrapper > div:nth-child(1)").addClass("form-1-move-down");
     $(".wrapper > div:nth-child(2)").removeClass("form-2-move-up");
     $(".wrapper > div:nth-child(3)").addClass("form-3-move-up");
+    $(".wrapper > div:nth-child(4)").removeClass("form-4-move-up");
 
 
     event.preventDefault();
@@ -26,9 +51,13 @@ $(".second").click(function (event) {
 
 $(".third").click(function (event) {
 
-    $(".side-icons div:nth-child(3)").removeClass("third-icon active");
-    $(".side-icons div:nth-child(4)").addClass("fourth-icon active");
+    $(".side-icons button:nth-child(1)").removeClass("active");
+    $(".side-icons button:nth-child(2)").removeClass("active");
+    $(".side-icons button:nth-child(3)").removeClass("active");
+    $(".side-icons button:nth-child(4)").addClass("active");
 
+    $(".wrapper > div:nth-child(1)").addClass("form-1-move-down");
+    $(".wrapper > div:nth-child(2)").removeClass("form-2-move-up");
     $(".wrapper > div:nth-child(3)").removeClass("form-3-move-up");
     $(".wrapper > div:nth-child(4)").addClass("form-4-move-up");
 
