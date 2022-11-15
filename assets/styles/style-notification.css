@@ -1,0 +1,59 @@
+/* styling navbar */
+.navbar {
+    background-color: transparent;
+    /* position: fixed; */
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+    height: 100px;
+    width: 100px;
+}
+
+
+.nav-link {
+    color: var(--white-color) !important;
+}
+
+.navbar a:hover,
+.pw-active {
+    color: #ee1c25 !important;
+    text-decoration: underline #ee1c25 5px;
+}
+
+.navbar a:active {
+    color: #ee1c25 !important;
+    text-decoration: underline #ee1c25 5px;
+}
+
+
+.container-height {
+    height: 100%;
+}
+
+/* responsive social media icons */
+.sm-icons {
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1000px) {
+    .sm-icons {
+        /* padding-right: 1em; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .sm-icons i {
+        padding: 10px;
+    }
+}
+
+nav {
+    position: fixed;
+    transition: background-color 0.4s ease-out;
+}
+
+nav.scroll {
+    background-color: var(--primary-color);
+}

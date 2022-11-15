@@ -1,0 +1,230 @@
+.center-div {
+    position: absolute;
+    margin-left: 22%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    border-radius: 3px;
+    /* background-color: blue; */
+    /* opacity: 0.4; */
+}
+
+.questions-container {
+    /* change container height here */
+    height: 550px;
+    /* width: 800px; */
+    /* background-color: #fff; */
+    /* padding: 20px; */
+    overflow: hidden;
+    margin-top: 25%;
+    /* width: 100%; */
+    /* border-radius: 30px; */
+}
+
+/* mu side icon styles */
+
+.side-icons .fa-solid {
+    color: var(--primary-color);
+    /* font-size: 50px; */
+    /* margin-bottom: 50px; */
+}
+
+.side-icons span {
+    margin: auto;
+    /* margin-top: 30%; */
+    /* padding: 50px 100px; */
+}
+
+.active {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 20px 0px 0px 20px;
+}
+
+.active .text-white {
+    color: var(--secondary-color) !important;
+}
+
+.active .fa-solid {
+    color: #fff;
+}
+
+
+.steps-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.question-submission {
+    width: 970px;
+    transition: .3s all ease;
+}
+
+.submission {
+    float: left;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+}
+
+.form-bg {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 0px 20px 20px 0px;
+    /* opacity: 0.4; */
+}
+
+
+.submission button:not(.add-btn) {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    width: max-content;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 300;
+    position: relative;
+}
+
+
+.next {
+    margin-left: 60%;
+}
+
+.add-mr-form {
+    margin-right: 30%;
+}
+
+.third-step h5 {
+    color: #fff;
+    font-size: 1.3em;
+    margin-top: 0px;
+}
+
+
+
+.container.second-dot .question-submission {
+    /* transform: translateY(-500px); */
+    transform: translateX(-625px);
+
+}
+
+.container.third-dot .question-submission {
+    /* transform: translateX(-625px);  */
+    transform: translateY(-525px);
+}
+
+.container.fourth-dot .question-submission {
+    /* transform: translateX(-625px); */
+    transform: translateY(-1025px);
+}
+
+
+.details-heading {
+    font-size: 32px;
+    color: var(--primary-color);
+    text-align: left;
+    /* padding-bottom: 5px;  */
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+/* @media screen and (max-width: 992px) {
+    .center-div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .questions-container {
+        margin-top: 15%;
+        height: 647px;
+        width: 579px;
+    }
+} */
+
+@media screen and (max-width: 1200px) {
+    .center-div {
+        margin-left: 17%;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .center-div {
+        margin-left: 1%;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .questions-container {
+        margin-top: 13%;
+        height: 1000px;
+    }
+
+    .active {
+        background-color: transparent;
+        /* border-radius: 20px 0px 0px 20px; */
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+    .questions-container {
+        width: 800px;
+        /* height: 800px; */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .questions-container {
+        /* width: 800px; */
+        height: 1100px;
+    }
+
+    .second-step {
+        /* margin-top: 450px; */
+    }
+
+    .third-step {
+        margin-top: 455px !important;
+    }
+
+    .fourth-step {
+        margin-top: 450px !important;
+    }
+
+    .third-step-rm-top {
+        margin-top: 0px !important;
+    }
+
+    .container.first-dot .question-submission {
+        /* transform: translateY(-500px); */
+        transform: translateY(-200px);
+
+    }
+
+    .container.second-dot .question-submission {
+        /* transform: translateY(-500px); */
+        /* transform: translateY(-200px); */
+
+    }
+
+    .container.third-dot .question-submission {
+        /* transform: translateX(-625px);  */
+        transform: translateY(-525px);
+    }
+
+    .container.fourth-dot .question-submission {
+        /* transform: translateX(-625px); */
+        transform: translateY(-1025px);
+    }
+
+}

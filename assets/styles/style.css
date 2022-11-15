@@ -1,0 +1,30 @@
+:root {
+    --primary-color: #131635;
+    --secondary-color: #EE1C25;
+    --white-color: #fff;
+    --light-blue: #1E234E;
+    --primary-font: 35px;
+    --secondary-font: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans';
+    color: var(--primary-color);
+    overflow-x: hidden;
+    /* background-color: var(--primary-color); */
+}
+
+/* @media screen and (max-width: 768px) {
+    body {
+        background-color: var(--primary-color);
+    }
+} */

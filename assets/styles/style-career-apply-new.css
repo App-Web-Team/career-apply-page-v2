@@ -1,0 +1,81 @@
+/* my side icon styles */
+
+.side-icons .fa-solid {
+    color: var(--primary-color);
+    /* font-size: 50px; */
+    /* margin-bottom: 50px; */
+}
+
+.side-icons span {
+    margin: auto;
+    /* margin-top: 30%; */
+    /* padding: 50px 100px; */
+}
+
+.active {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 20px 20px;
+}
+
+.active .text-white {
+    color: var(--secondary-color) !important;
+}
+
+.active .fa-solid {
+    color: #fff;
+}
+
+/* End - my side icons */
+
+/* Style form details */
+
+.wrapper {
+    background-color: rgba(255, 255, 255, .5);
+    border-radius: 0px 20px 20px 0px;
+    padding: 20px 40px;
+    height: 610px;
+}
+
+.details-heading {
+    display: inline-block;
+    font-size: 32px;
+    color: var(--primary-color);
+    text-align: left;
+    /* padding-bottom: 5px;  */
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.next {
+    text-decoration: none;
+    background: var(--secondary-color);
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    width: max-content;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+/* End - style form details */
+
+/* jquery styling */
+
+.form-1 {
+    transform: translateY(600px);
+}
+
+.form-1-move-up {
+    transform: translateY(-600px);
+}
+
+.form-2-move-up {
+    transform: translateY(-600px);
+}
+
+.form-3-move-up {
+    transform: translateY(-1200px);
+}
+
+/* end - jquery styling */
