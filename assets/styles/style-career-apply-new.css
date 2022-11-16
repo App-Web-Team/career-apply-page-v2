@@ -221,6 +221,7 @@ input:not(.not-apply):valid~label {
     border-radius: 15px;
     width: 100%;
     padding: 50px;
+    /* position: relative; */
 }
 
 @media screen and (max-width: 576px) {
@@ -230,9 +231,10 @@ input:not(.not-apply):valid~label {
     }
 }
 
-.resume-box span {
+.resume-box label {
     font-size: 17px;
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 .resume-box p {
@@ -259,7 +261,16 @@ form-check-input {
     background-color: #ee1c25;
 }
 
+.custom-file-input {
+    cursor: pointer;
+    width: 100%;
+    /* height: 100%; */
+    /* background: #ee1c25 !important;
+    position: absolute; */
+    /* top: -100%; */
+}
 
 
 
 /* end - form 4 styling */
+

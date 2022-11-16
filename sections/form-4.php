@@ -1,4 +1,3 @@
-
 <!-- <div class="form-3-move-up"> -->
 <div class="mt-5">
     <form action="">
@@ -14,10 +13,11 @@
         </div>
         <div class="row f-row mt-5">
             <div class="resume-box ml-md-3 text-center">
-                <span class="text-capitalize">
+                <label for="myFile" class="text-capitalize not-apply">
                     resume upload
                     <i class="fa-solid fa-arrow-up-from-bracket"></i>
-                </span>
+                </label>
+                <input class="not-apply custom-style d-none" type="file" id="myFile" name="filename">
                 <p>Please upload only pdf & docx</p>
             </div>
         </div>
