@@ -11,6 +11,10 @@ $(".zero").click(function (event) {
     $(".wrapper > div:nth-child(3)").removeClass("form-3-move-up");
     $(".wrapper > div:nth-child(4)").removeClass("form-4-move-up");
 
+    $(".side-icons > button:nth-child(2)").prop('disabled', true); 
+    $(".side-icons > button:nth-child(3)").prop('disabled', true); 
+    $(".side-icons > button:nth-child(4)").prop('disabled', true); 
+
     // Stop the button from performing it's default task
     event.preventDefault();
 });
@@ -26,6 +30,13 @@ $(".first").click(function (event) {
     $(".wrapper > div:nth-child(2)").addClass("form-2-move-up");
     $(".wrapper > div:nth-child(3)").removeClass("form-3-move-up");
     $(".wrapper > div:nth-child(4)").removeClass("form-4-move-up");
+
+    $(".side-icons > button:first").prop('disabled', false); 
+
+    $(".side-icons > button:nth-child(3)").prop('disabled', true); 
+    $(".side-icons > button:nth-child(4)").prop('disabled', true); 
+
+    
 
     // Stop the button from performing it's default task
     event.preventDefault();
@@ -45,6 +56,10 @@ $(".second").click(function (event) {
     $(".wrapper > div:nth-child(3)").addClass("form-3-move-up");
     $(".wrapper > div:nth-child(4)").removeClass("form-4-move-up");
 
+    $(".side-icons > button:nth-child(2)").prop('disabled', false); 
+
+    $(".side-icons > button:nth-child(4)").prop('disabled', true); 
+
 
     event.preventDefault();
 });
@@ -60,6 +75,8 @@ $(".third").click(function (event) {
     $(".wrapper > div:nth-child(2)").removeClass("form-2-move-up");
     $(".wrapper > div:nth-child(3)").removeClass("form-3-move-up");
     $(".wrapper > div:nth-child(4)").addClass("form-4-move-up");
+
+    $(".side-icons > button:nth-child(3)").prop('disabled', false); 
 
     event.preventDefault();
 });

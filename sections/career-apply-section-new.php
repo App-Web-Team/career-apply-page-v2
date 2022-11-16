@@ -7,7 +7,7 @@
         <!-- side icons tab -->
         <div class="col-md-3 col-lg-2 p-0">
             <div class="side-icons line d-flex justify-content-center flex-md-column">
-                <button class="zero first-icon active">
+                <button class="zero first-icon active" disabled>
                     <div class="px-sm-4 py-4">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x text-white"></i>
@@ -16,7 +16,7 @@
                     </div>
                 </button>
 
-                <button class="first second-icon">
+                <button class="first second-icon" disabled>
                     <div class="px-sm-4 py-4 ">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x text-white"></i>
@@ -24,7 +24,7 @@
                         </span>
                     </div>
                 </button>
-                <button class="second third-icon">
+                <button class="second third-icon" disabled>
                     <div class="px-sm-4 py-4 ">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x text-white"></i>
@@ -32,7 +32,7 @@
                         </span>
                     </div>
                 </button>
-                <button class="third fourth-icon">
+                <button class="third fourth-icon" disabled>
                     <div class="px-sm-4 py-4 ">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x text-white"></i>
