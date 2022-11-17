@@ -182,6 +182,14 @@ input:not(.not-apply):valid~label {
 
 /* end - form styling */
 
+/* form 1 styling */
+
+.first-button {
+    margin-top: 138px;
+}
+
+/* end - form 1 styling */
+
 /* form 2 styling */
 /* end - form 2 styling */
 

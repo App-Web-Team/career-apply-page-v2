@@ -1,4 +1,3 @@
-
 <!-- <div class="form-1"> -->
 <div class="">
     <p class="details-heading text-capitalize">
@@ -41,28 +40,8 @@
                 <label>pincode</label>
             </div>
         </div>
-        <div class="row f-row my-5">
-            <div class="col">
-                <input required type="text" />
-                <label>father's name</label>
-            </div>
-            <div class="col">
-                <input required type="text" />
-                <label>father's occupation</label>
-            </div>
-        </div>
-        <div class="row f-row my-5">
-            <div class="col">
-                <input required type="text" />
-                <label>mother's name</label>
-            </div>
-            <div class="col">
-                <input required type="text" />
-                <label>mother's occupation</label>
-            </div>
-        </div>
         <div class="text-center">
-            <button class="first next">Save & Proceed</button>
+            <button class="first next first-button">Save & Proceed</button>
         </div>
     </form>
 </div>
