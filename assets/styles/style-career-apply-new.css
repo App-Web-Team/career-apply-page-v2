@@ -172,6 +172,13 @@ input:not(.not-apply):valid~label {
 
 .col {
     height: 20px;
+    position: relative;
+}
+
+.col i {
+    position: absolute;
+    right: 20px;
+    color: var(--secondary-color);
 }
 
 @media screen and (max-width: 576px) {

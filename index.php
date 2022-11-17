@@ -17,7 +17,7 @@
     <title>Career Apply Page</title>
 </head>
 
-<body>
+<body onload='document.form1.fname.focus()'>
     <?php
     // header section
     include "sections/header-section.php";
