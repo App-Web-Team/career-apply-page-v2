@@ -43,30 +43,32 @@
         </div>
 
         <div class="row f-row"">
-            <button class="btn add-btn text-capitalize ml-3 mt-3 clg-add-btn">+ add</button>
+            <button class=" btn add-btn text-capitalize ml-3 clg-add-btn">+ add</button>
         </div>
-        <div class="row f-row my-5">
+        <div class="row f-row my-3">
             <p class="please-text ml-3">Please list out all the certification throughout the years</p>
         </div>
-        <div class="row f-row my-5">
-            <div class="col certifications-col">
-                <input required type="text" id="certifications" />
-                <label>certifications</label>
-                <i class="d-none">*fill this</i>
-            </div>
-            <div class="col year-col">
-                <input required type="text" id="year" />
-                <label>year</label>
-                <i class="d-none">*fill this</i>
-            </div>
-            <div class="col pb-col">
-                <input required type="text" id="pb" />
-                <label>provided by</label>
-                <i class="d-none">*fill this</i>
+        <div class="certifications-duplicate">
+            <div class="row f-row my-5">
+                <div class="col certifications-col">
+                    <input required type="text" id="certifications" />
+                    <label>certifications</label>
+                    <i class="d-none">*fill this</i>
+                </div>
+                <div class="col year-col">
+                    <input required type="text" id="year" />
+                    <label>year</label>
+                    <i class="d-none">*fill this</i>
+                </div>
+                <div class="col pb-col">
+                    <input required type="text" id="pb" />
+                    <label>provided by</label>
+                    <i class="d-none">*fill this</i>
+                </div>
             </div>
         </div>
         <div class="row f-row my-0 mb-3">
-            <button class="btn add-btn text-capitalize ml-3">+ add</button>
+            <button class="btn add-btn text-capitalize ml-3 certificate-add-btn">+ add</button>
         </div>
         <div class="text-center">
             <button class="second next">Save & Proceed</button>

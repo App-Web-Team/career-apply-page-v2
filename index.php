@@ -29,6 +29,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script> -->
     <script src="assets/scripts/career-apply-script.js"></script>
+    <script src="assets/scripts/form1.js"></script>
+    <script src="assets/scripts/form2.js"></script>
+    <script src="assets/scripts/form3.js"></script>
+    <script src="assets/scripts/form4.js"></script>
 </body>
 
 </html>

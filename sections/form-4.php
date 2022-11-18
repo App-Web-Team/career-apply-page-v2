@@ -19,6 +19,7 @@
                 </label>
                 <input class="not-apply custom-style d-none" type="file" id="myFile" name="filename">
                 <p>Please upload only pdf & docx</p>
+                <i class="d-none" id="err-file">*file not uploaded</i>
             </div>
         </div>
         <div class="row f-row mt-4">

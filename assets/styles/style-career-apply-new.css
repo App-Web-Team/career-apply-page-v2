@@ -116,17 +116,30 @@
 }
 
 .form-3-move-up {
-    transform: translateY(-1215px);
+    transform: translateY(-1178px);
 }
+
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
     .form-3-move-up {
-        transform: translateY(-1255px);
+        transform: translateY(-1210px)
     }
 }
 
 .form-4-move-up {
-    transform: translateY(-1740px);
+    transform: translateY(-1720px);
+}
+
+@media screen and (max-width: 576px) {
+
+    .form-3-move-up {
+        transform: translateY(-1155px);
+    }
+
+    .form-4-move-up {
+        transform: translateY(-1710px);
+    }
+
 }
 
 /* end - jquery styling */
@@ -291,11 +304,34 @@ form-check-input {
     /* top: -100%; */
 }
 
+#err-file {
+    color: var(--secondary-color);
+}
+
 
 
 /* end - form 4 styling */
 
 .degree-duplicate {
-    height: 184px;
-    
+    height: 180px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.certifications-duplicate {
+    height: 100px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.experience-duplicate {
+    height: 180px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.skills-duplicate {
+    height: 100px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }

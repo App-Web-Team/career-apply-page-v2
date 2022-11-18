@@ -43,7 +43,7 @@
             </div>
             <div class="col pincode-col">
                 <input required type="text" id="pincode" />
-                <label>pincode <span class="req">&#42;</span></label>
+                <label>pincode</label>
                 <i class="d-none" id="err-pin">*fill this</i>
             </div>
         </div>
