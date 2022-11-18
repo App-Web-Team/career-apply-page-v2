@@ -198,6 +198,12 @@ input:not(.not-apply):valid~label {
 /* end - form 1 styling */
 
 /* form 2 styling */
+
+.degree-wrapper {
+    height: 200px;
+    overflow-y: scroll;
+}
+
 /* end - form 2 styling */
 
 /* form 2 styling */
@@ -289,3 +295,7 @@ form-check-input {
 
 /* end - form 4 styling */
 
+.degree-duplicate {
+    height: 184px;
+    
+}
