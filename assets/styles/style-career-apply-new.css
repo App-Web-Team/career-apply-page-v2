@@ -176,8 +176,7 @@ input:focus {
     border-bottom: solid 2px var(--secondary-color);
 }
 
-input:not(.not-apply):focus~label,
-input:not(.not-apply):valid~label {
+input:not(.not-apply):focus~label{
     top: -60px;
     /* font-size: 14px; */
     color: var(--secondary-color);

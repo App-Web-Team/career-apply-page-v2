@@ -5,5 +5,5 @@ $(".last").click(function (event) {
         $("#err-file").addClass("d-none");
         alert("form submitted");
     }
-    event.preventDefault();
+    // event.preventDefault();
 });

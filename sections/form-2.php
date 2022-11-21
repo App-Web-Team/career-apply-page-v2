@@ -14,28 +14,27 @@
     </div> -->
 
 
-    <form action="" autocomplete="off" spellcheck="false">
         <div class="degree-duplicate">
             <div class="row f-row mt-5">
                 <div class="col degree-col">
-                    <input required type="text" id="degree" />
+                    <input  type="text" id="degree" name="degree"/>
                     <label>degree <span class="req">&#42;</span></label>
                     <i class="d-none">*fill this</i>
                 </div>
                 <div class="col college-col">
-                    <input required type="text" id="college" />
+                    <input  type="text" id="college" name="college"/>
                     <label>college <span class="req">&#42;</span></label>
                     <i class="d-none">*fill this</i>
                 </div>
             </div>
             <div class="row f-row my-5">
                 <div class="col yog-col">
-                    <input required type="text" id="yog" />
+                    <input  type="text" id="yog" name="yog"/>
                     <label>year <span class="text-lowercase">of</span> graduation <span class="req">&#42;</span></label>
                     <i class="d-none" id="err-yog">*fill this</i>
                 </div>
                 <div class="col cgpa-col">
-                    <input required type="text" id="cgpa" />
+                    <input  type="text" id="cgpa" name="cgpa"/>
                     <label><span class="text-uppercase">cgpa</span> / percentage <span class="req">&#42;</span></label>
                     <i class="d-none" id="err-cgpa">*fill this</i>
                 </div>
@@ -51,17 +50,17 @@
         <div class="certifications-duplicate">
             <div class="row f-row my-5">
                 <div class="col certifications-col">
-                    <input required type="text" id="certifications" />
+                    <input type="text" id="certifications" name="certifications"/>
                     <label>certifications</label>
                     <i class="d-none">*fill this</i>
                 </div>
                 <div class="col year-col">
-                    <input required type="text" id="year" />
+                    <input type="text" id="year" name="year"/>
                     <label>year</label>
                     <i class="d-none">*fill this</i>
                 </div>
                 <div class="col pb-col">
-                    <input required type="text" id="pb" />
+                    <input type="text" id="pb" name="pb"/>
                     <label>provided by</label>
                     <i class="d-none">*fill this</i>
                 </div>
@@ -73,7 +72,6 @@
         <div class="text-center">
             <button class="second next">Save & Proceed</button>
         </div>
-    </form>
 
 
 </div>

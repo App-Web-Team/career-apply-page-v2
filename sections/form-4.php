@@ -1,13 +1,12 @@
 <!-- <div class="form-3-move-up"> -->
 <div class="mt-5">
-    <form action="">
         <div class="row f-row mt-5">
             <div class="col">
-                <input required type="text" />
+                <input type="text" name="eSalary"/>
                 <label>expected salary</label>
             </div>
             <div class="col">
-                <input required type="text" />
+                <input type="text" name="ePosition"/>
                 <label>expected position</label>
             </div>
         </div>
@@ -17,7 +16,7 @@
                     resume upload
                     <i class="fa-solid fa-arrow-up-from-bracket"></i>
                 </label>
-                <input class="not-apply custom-style d-none" type="file" id="myFile" name="filename">
+                <input class="not-apply custom-style d-none" type="file" id="myFile" name="resume" >
                 <p>Please upload only pdf & docx</p>
                 <i class="d-none" id="err-file">*file not uploaded</i>
             </div>
@@ -31,8 +30,7 @@
             </div>
         </div>
         <div class="text-center">
-            <button class="last next">Save & Proceed</button>
+            <button class="last next" type="submit">Save & Proceed</button>
         </div>
 
-    </form>
 </div>

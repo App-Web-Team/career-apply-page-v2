@@ -43,21 +43,23 @@
             </div>
         </div>
         <!-- wrapper col -->
-        <div class="wrapper col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7">
-            <?php
-            echo '<div class="">';
-            include "sections/form-1.php";
-            echo '</div>';
-            echo '<div class="">';
-            include "sections/form-2.php";
-            echo '</div>';
-            echo '<div class="">';
-            include "sections/form-3.php";
-            echo '</div>';
-            echo '<div class="">';
-            include "sections/form-4.php";
-            echo '</div>';
-            ?>
+        <div class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 p-0">
+            <form class="wrapper" action="sections/insert-pd.php" method="post" name="form1" autocomplete="off" spellcheck="false">
+                <?php
+                echo '<div class="">';
+                include "sections/form-1.php";
+                echo '</div>';
+                echo '<div class="">';
+                include "sections/form-2.php";
+                echo '</div>';
+                echo '<div class="">';
+                include "sections/form-3.php";
+                echo '</div>';
+                echo '<div class="">';
+                include "sections/form-4.php";
+                echo '</div>';
+                ?>
+            </form>
         </div>
     </div>
 </div>

@@ -119,7 +119,7 @@ $(".clg-add-btn").click(function (event) {
         $(".cgpa-col i").removeClass("d-none");
     }
     else if ($cgpa != "" && !isCgpaValid) {
-        var regex = /(^[0-8][.][0-9][0-9]$)|(^\d{2}[%]?$)/;
+        var regex = /(^[0-10][.][0-9][0-9]$)|(^\d{2}[%]?$)/;
         if (regex.test($cgpa)) {
             isCgpaValid = true;
             $("#err-cgpa").html("valid");
