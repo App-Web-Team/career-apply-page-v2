@@ -44,7 +44,7 @@
         </div>
         <!-- wrapper col -->
         <div class="col-11 col-sm-10 col-md-9 col-lg-8 col-xl-7 p-0">
-            <form class="wrapper" action="sections/insert-pd.php" method="post" name="form1" autocomplete="off" spellcheck="false">
+            <form class="wrapper" action="sections/insert-pd.php" method="post" enctype="multipart/form-data" name="form1" autocomplete="off" spellcheck="false">
                 <?php
                 echo '<div class="">';
                 include "sections/form-1.php";

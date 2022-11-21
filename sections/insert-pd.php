@@ -8,6 +8,51 @@
 <body>
     <center>
         <?php
+        // require 'connection.php';
+        // if (isset($_POST["submit"])) {
+        //     if ($_FILES["image"]["error"] == 4) {
+        //         echo
+        //         "<script> alert('Image Does Not Exist'); </script>";
+        //     } else {
+        //         $fileName = $_FILES["myFile"]["name"];
+        //         $fileSize = $_FILES["myFile"]["size"];
+        //         $tmpName = $_FILES["myFile"]["tmp_name"];
+
+        //         $validImageExtension = ['jpg', 'jpeg', 'png'];
+        //         $imageExtension = explode('.', $fileName);
+        //         $imageExtension = strtolower(end($imageExtension));
+        //         if (!in_array($imageExtension, $validImageExtension)) {
+        //             echo
+        //             "
+        //   <script>
+        //     alert('Invalid Image Extension');
+        //   </script>
+        //   ";
+        //         } else if ($fileSize > 1000000) {
+        //             echo
+        //             "
+        //   <script>
+        //     alert('Image Size Is Too Large');
+        //   </script>
+        //   ";
+        //         } else {
+        //             $newImageName = uniqid();
+        //             $newImageName .= '.' . $imageExtension;
+
+        //             move_uploaded_file($tmpName, 'img/' . $newImageName);
+        //             $query = "INSERT INTO pd (myFile) VALUES('$newImageName')";
+        //             mysqli_query($conn, $query);
+        //             echo
+        //             "
+        //   <script>
+        //     alert('Successfully Added');
+        //   </script>
+        //   ";
+        //         }
+        //     }
+        // }
+        ?>
+        <?php
 
         // servername => localhost
         // username => root
@@ -44,20 +89,44 @@
         $yip = $_REQUEST['yip'];
         $eSalary = $_REQUEST['eSalary'];
         $ePosition = $_REQUEST['ePosition'];
-        $resume = $_REQUEST['resume']; //23
+        // $resume = $_REQUEST['resume'];
 
+        $fileName = $_FILES["myFile"]["name"];
+        $fileSize = $_FILES["myFile"]["size"];
+        $tmpName = $_FILES["myFile"]["tmp_name"];
+
+        $validImageExtension = ['pdf', 'docx'];
+        $imageExtension = explode('.', $fileName);
+        $imageExtension = strtolower(end($imageExtension));
+
+        $newImageName = uniqid();
+        $newImageName .= '.' . $imageExtension;
+
+        if (!in_array($imageExtension, $validImageExtension)) {
+            echo
+            "
+                <script>
+                alert('Invalid Image Extension');
+                </script>
+            ";
+        } else if ($fileSize > 1000000) {
+            echo
+            "
+                <script>
+                alert('Image Size Is Too Large');
+                </script>
+            ";
+        }
         // Performing insert query execution
         // here our table name is college
-        $sql = "INSERT INTO pd (fname, lname, phNo, email, address, state, pincode, degree, college, yog, cgpa, certifications, year, pb, designation, company, experience, ctc, skills, yip, eSalary, ePosition, resume)
-        VALUES ('$first_name', '$last_name', '$phNo', '$email', '$address', '$state', '$pincode','$degree', '$college', '$yog', '$cgpa', '$certifications', '$year', '$pb', '$designation', '$company', '$experience', '$ctc', '$skills', '$yip', '$eSalary', '$ePosition', '$resume')";
+        $sql = "INSERT INTO pd (fname, lname, phNo, email, address, state, pincode, degree, college, yog, cgpa, certifications, year, pb, designation, company, experience, ctc, skills, yip, eSalary, ePosition, myFile)
+        VALUES ('$first_name', '$last_name', '$phNo', '$email', '$address', '$state', '$pincode','$degree', '$college', '$yog', '$cgpa', '$certifications', '$year', '$pb', '$designation', '$company', '$experience', '$ctc', '$skills', '$yip', '$eSalary', '$ePosition', '$newImageName')";
+
 
         if (mysqli_query($conn, $sql)) {
             echo "<h3>data stored in a database successfully."
                 . " Please browse your localhost php my admin"
                 . " to view the updated data</h3>";
-
-            // echo nl2br("\n$first_name\n $last_name\n "
-            //     . "$gender\n $address\n $email");
         } else {
             echo "ERROR: Hush! Sorry $sql. "
                 . mysqli_error($conn);

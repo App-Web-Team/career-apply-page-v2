@@ -306,6 +306,9 @@ form-check-input {
 #err-file {
     color: var(--secondary-color);
 }
+#succ-file {
+    color: var(--secondary-color);
+}
 
 
 

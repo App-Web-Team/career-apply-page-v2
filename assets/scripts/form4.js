@@ -3,7 +3,7 @@ $(".last").click(function (event) {
         $("#err-file").removeClass("d-none");
     } else {
         $("#err-file").addClass("d-none");
-        alert("form submitted");
+        // alert("form submitted");
     }
     // event.preventDefault();
 });
