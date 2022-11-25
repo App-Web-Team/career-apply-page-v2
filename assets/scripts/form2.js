@@ -74,7 +74,7 @@ $(".second").click(function (event) {
     }
     else if (($yog != "" && !isYogValid) || ($cgpa != "" && !isCgpaValid)) {
         var yogregex = /^\d{4}$/;
-        var cgparegex = /(^[0-8][.][0-9][0-9]$)|(^\d{3}?[%]?$)/;
+        var cgparegex = /^([1-9]([0-9])?|0)(\.[0-9]{1,3})?$/;
         if (yogregex.test($yog)) {
             isYogValid = true;
             $("#err-yog").html("valid");
