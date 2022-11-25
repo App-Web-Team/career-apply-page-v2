@@ -1,3 +1,47 @@
+function yogValidation() {
+    console.log("yog");
+    $(".yog-col i").removeClass('d-none');
+    // let form = document.getElementById('yog-col')
+    let yog = document.getElementById('yog').value
+    let text = document.getElementById('err-yog')
+    let pattern = /^\d{3}$/
+
+    if (yog.match(pattern)) {
+        text.innerHTML = "valid"
+        text.style.color = 'var(--secondary-color)'
+    } else {
+        text.innerHTML = "not valid"
+        text.style.color = 'var(--secondary-color)'
+    }
+
+    if (yog == '') {
+        text.innerHTML = ""
+        text.style.color = 'var(--secondary-color)'
+    }
+}
+function cgpaValidation() {
+    console.log("cgpa");
+    $(".cgpa-col i").removeClass('d-none');
+    // let form = document.getElementById('yog-col')
+    let cgpa = document.getElementById('cgpa').value
+    let text = document.getElementById('err-cgpa')
+    let pattern = /^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$/
+
+    if (cgpa.match(pattern)) {
+        text.innerHTML = "valid"
+        text.style.color = 'var(--secondary-color)'
+    } else {
+        text.innerHTML = "not valid"
+        text.style.color = 'var(--secondary-color)'
+    }
+
+    if (cgpa == '') {
+        text.innerHTML = ""
+        text.style.color = 'var(--secondary-color)'
+    }
+}
+
+
 
 var isYogValid = false;
 var isCgpaValid = false;
@@ -24,9 +68,14 @@ $(".second").click(function (event) {
         $(".col i").addClass("d-none");
         $(".yog-col i").removeClass("d-none");
     }
-    else if ($yog != "" && !isYogValid) {
-        var regex = /^\d{4}$/;
-        if (regex.test($yog)) {
+    else if ($cgpa == "") {
+        $(".col i").addClass("d-none");
+        $(".cgpa-col i").removeClass("d-none");
+    }
+    else if (($yog != "" && !isYogValid) || ($cgpa != "" && !isCgpaValid)) {
+        var yogregex = /^\d{4}$/;
+        var cgparegex = /(^[0-8][.][0-9][0-9]$)|(^\d{3}[%]?$)/;
+        if (yogregex.test($yog)) {
             isYogValid = true;
             $("#err-yog").html("valid");
         } else {
@@ -34,14 +83,7 @@ $(".second").click(function (event) {
             $(".col i").addClass("d-none");
             $(".yog-col i").removeClass("d-none");
         }
-    }
-    else if ($cgpa == "") {
-        $(".col i").addClass("d-none");
-        $(".cgpa-col i").removeClass("d-none");
-    }
-    else if ($cgpa != "" && !isCgpaValid) {
-        var regex = /(^[0-8][.][0-9][0-9]$)|(^\d{2}[%]?$)/;
-        if (regex.test($cgpa)) {
+        if (cgparegex.test($cgpa)) {
             isCgpaValid = true;
             $("#err-cgpa").html("valid");
         } else {
@@ -50,6 +92,18 @@ $(".second").click(function (event) {
             $(".cgpa-col i").removeClass("d-none");
         }
     }
+
+    // else if ($cgpa != "" && !isCgpaValid) {
+    //     var cgparegex = /(^[0-8][.][0-9][0-9]$)|(^\d{2}[%]?$)/;
+    //     if (cgparegex.test($cgpa)) {
+    //         isCgpaValid = true;
+    //         $("#err-cgpa").html("valid");
+    //     } else {
+    //         $("#err-cgpa").html("not valid");
+    //         $(".col i").addClass("d-none");
+    //         $(".cgpa-col i").removeClass("d-none");
+    //     }
+    // }
     // else if ($certifications == "") {
     //     $(".col i").addClass("d-none");
     //     $(".certifications-col i").removeClass("d-none");
@@ -133,7 +187,7 @@ $(".clg-add-btn").click(function (event) {
         $(".degree-duplicate").append($(
             '<div class="row f-row mt-5">' +
             '<div class= "col degree-col">' +
-            '<input required type="text" id="degree" />' +
+            '<input required type="text" id="degree" name="degree[]" />' +
             '<label>degree <span class="req">&#42;</span></label>' +
             '<i class="d-none">*fill this</i>' +
             '</div >' +

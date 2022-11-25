@@ -53,7 +53,6 @@
         // }
         ?>
         <?php
-
         // servername => localhost
         // username => root
         // password => empty
@@ -66,6 +65,7 @@
                 . mysqli_connect_error());
         }
 
+        
         // Taking all 5 values from the form data(input)
         $first_name = $_REQUEST['fname'];
         $last_name = $_REQUEST['lname'];
@@ -75,6 +75,8 @@
         $state = $_REQUEST['state'];
         $pincode = $_REQUEST['pincode'];
         $degree = $_REQUEST['degree'];
+        $degree_arr = array("degree1", "degree3");
+        $degree_str = serialize($degree_arr);
         $college = $_REQUEST['college'];
         $yog = $_REQUEST['yog'];
         $cgpa = $_REQUEST['cgpa'];
@@ -120,7 +122,7 @@
         // Performing insert query execution
         // here our table name is college
         $sql = "INSERT INTO pd (fname, lname, phNo, email, address, state, pincode, degree, college, yog, cgpa, certifications, year, pb, designation, company, experience, ctc, skills, yip, eSalary, ePosition, myFile)
-        VALUES ('$first_name', '$last_name', '$phNo', '$email', '$address', '$state', '$pincode','$degree', '$college', '$yog', '$cgpa', '$certifications', '$year', '$pb', '$designation', '$company', '$experience', '$ctc', '$skills', '$yip', '$eSalary', '$ePosition', '$newImageName')";
+        VALUES ('$first_name', '$last_name', '$phNo', '$email', '$address', '$state', '$pincode','$degree_str', '$college', '$yog', '$cgpa', '$certifications', '$year', '$pb', '$designation', '$company', '$experience', '$ctc', '$skills', '$yip', '$eSalary', '$ePosition', '$newImageName')";
 
 
         if (mysqli_query($conn, $sql)) {

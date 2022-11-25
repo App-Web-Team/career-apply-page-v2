@@ -17,7 +17,7 @@
         <div class="degree-duplicate">
             <div class="row f-row mt-5">
                 <div class="col degree-col">
-                    <input  type="text" id="degree" name="degree"/>
+                    <input  type="text" id="degree" name="degree[]"/>
                     <label>degree <span class="req">&#42;</span></label>
                     <i class="d-none">*fill this</i>
                 </div>
@@ -29,12 +29,12 @@
             </div>
             <div class="row f-row my-5">
                 <div class="col yog-col">
-                    <input  type="text" id="yog" name="yog"/>
+                    <input  type="" id="yog" name="yog" onkeydown="yogValidation()"/>
                     <label>year <span class="text-lowercase">of</span> graduation <span class="req">&#42;</span></label>
                     <i class="d-none" id="err-yog">*fill this</i>
                 </div>
                 <div class="col cgpa-col">
-                    <input  type="text" id="cgpa" name="cgpa"/>
+                    <input  type="text" id="cgpa" name="cgpa" onkeydown="cgpaValidation()"/>
                     <label><span class="text-uppercase">cgpa</span> / percentage <span class="req">&#42;</span></label>
                     <i class="d-none" id="err-cgpa">*fill this</i>
                 </div>

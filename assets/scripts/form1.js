@@ -1,3 +1,53 @@
+function emailValidation() {
+    $(".email-col i").removeClass('d-none');
+    let form = document.getElementById('email-col')
+    let email = document.getElementById('email').value
+    let text = document.getElementById('err-email')
+    let pattern = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+
+    if (email.match(pattern)) {
+        text.innerHTML = "valid"
+        text.style.color = 'var(--secondary-color)'
+    } else {
+        text.innerHTML = "not valid"
+        text.style.color = 'var(--secondary-color)'
+    }
+
+    if (email == '') {
+        text.innerHTML = ""
+        text.style.color = 'var(--secondary-color)'
+    }
+}
+
+function phNoValidation() {
+    $(".ph-col i").removeClass('d-none');
+    // let form = document.getElementById('ph-col')
+    let phNo = document.getElementById('phNo').value
+    let text = document.getElementById('err')
+    let pattern = /^(0|91)?[0-9]{9}$/
+
+    if (phNo.match(pattern)) {
+        // form.classList.add('valid')
+        // form.classList.remove('invalid')
+        text.innerHTML = "valid"
+        text.style.color = 'var(--secondary-color)'
+    } else {
+        // form.classList.remove('valid')
+        // form.classList.add('invalid')
+        text.innerHTML = "not valid"
+        text.style.color = 'var(--secondary-color)'
+    }
+
+    if (phNo == '') {
+        // form.classList.remove('valid')
+        // form.classList.remove('invalid')
+        text.innerHTML = ""
+        text.style.color = 'var(--secondary-color)'
+    }
+}
+
+
+
 var isValid = false;
 var isEmailValid = false;
 var isPinValid = false;
@@ -23,9 +73,13 @@ $(".first").click(function (event) {
         $(".col i").addClass("d-none");
         $(".ph-col i").removeClass("d-none");
     }
-    else if ($phNo != "" && !isValid) {
-        var regex = /^(0|91)?[6-9][0-9]{9}$/;
-        if (regex.test($phNo)) {
+    else if ($email == "") {
+        $(".col i").addClass("d-none");
+        $(".email-col i").removeClass("d-none");
+    }
+    else if (($phNo != "" && !isValid) || ($email != "" && !isEmailValid)) {
+        var phregex = /^(0|91)?[0-9]{10}$/
+        if (phregex.test($phNo)) {
             isValid = true;
             $("#err").html("valid");
         } else {
@@ -33,22 +87,30 @@ $(".first").click(function (event) {
             $(".col i").addClass("d-none");
             $(".ph-col i").removeClass("d-none");
         }
-    }
-    else if ($email == "") {
-        $(".col i").addClass("d-none");
-        $(".email-col i").removeClass("d-none");
-    }
-    else if ($email != "" && !isEmailValid) {
-        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if (regex.test($email)) {
-            isEmailValid = true;
-            $("#err-email").html("valid");
-        } else {
-            $("#err-email").html("not valid");
-            $(".col i").addClass("d-none");
-            $(".email-col i").removeClass("d-none");
+        if ($email != "" && !isEmailValid) {
+            var emailregex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            if (emailregex.test($email)) {
+                isEmailValid = true;
+                $("#err-email").html("valid");
+            } else {
+                $("#err-email").html("not valid");
+                $(".col i").addClass("d-none");
+                $(".email-col i").removeClass("d-none");
+            }
         }
     }
+
+    // else if ($email != "" && !isEmailValid) {
+    //     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    //     if (regex.test($email)) {
+    //         isEmailValid = true;
+    //         $("#err-email").html("valid");
+    //     } else {
+    //         $("#err-email").html("not valid");
+    //         $(".col i").addClass("d-none");
+    //         $(".email-col i").removeClass("d-none");
+    //     }
+    // }
     else if ($address == "") {
         $(".col i").addClass("d-none");
         $(".address-col i").removeClass("d-none");

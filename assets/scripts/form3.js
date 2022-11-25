@@ -1,3 +1,25 @@
+function yipValidation() {
+    console.log("yip");
+    $(".yip-col i").removeClass('d-none');
+    // let form = document.getElementById('yog-col')
+    let yip = document.getElementById('yip').value
+    let text = document.getElementById('err-yip')
+    let pattern = /^[0-9]*$/
+
+    if (yip.match(pattern)) {
+        text.innerHTML = "valid"
+        text.style.color = 'var(--secondary-color)'
+    } else {
+        text.innerHTML = "not valid"
+        text.style.color = 'var(--secondary-color)'
+    }
+
+    if (yip == '') {
+        text.innerHTML = ""
+        text.style.color = 'var(--secondary-color)'
+    }
+}
+
 var isCtcValid = false;
 var isYipValid = false;
 

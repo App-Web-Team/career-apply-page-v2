@@ -43,7 +43,7 @@
                     <i class="d-none">*fill this</i>
                 </div>
                 <div class="col yip-col">
-                    <input  type="text" id="yip" name="yip"/>
+                    <input  type="" id="yip" name="yip" onkeydown="yipValidation()"/>
                     <label>years <span class="text-lowercase">in practice</span> <span class="req">&#42;</span></label>
                     <i class="d-none" id="err-yip">*fill this</i>
                 </div>
