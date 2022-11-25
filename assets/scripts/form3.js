@@ -135,24 +135,24 @@ $(".experience-add-btn").click(function (event) {
         $(".experience-duplicate").append($(
             '<div class="row f-row mt-5">' +
             '    <div class="col des-col">' +
-            '        <input required type="text" id="des" />' +
+            '        <input  type="text" id="des" name="designation[]"/>' +
             '        <label>designation</label>' +
             '        <i class="d-none">*fill this</i>' +
             '    </div>' +
             '    <div class="col company-col">' +
-            '        <input required type="text" id="company" />' +
+            '        <input  type="text" id="company" name="company[]"/>' +
             '        <label>company name</label>' +
             '        <i class="d-none">*fill this</i>' +
             '    </div>' +
             '</div>' +
             '<div class="row f-row my-5">' +
             '    <div class="col experience-col">' +
-            '        <input required type="text" id="experience" />' +
+            '        <input  type="text" id="experience" name="experience[]"/>' +
             '        <label>experience</label>' +
             '        <i class="d-none">*fill this</i>' +
             '    </div>' +
             '    <div class="col ctc-col">' +
-            '        <input required type="text" id="ctc" />' +
+            '        <input type="text" id="ctc"  name="ctc[]"/>' +
             '        <label><span class="text-uppercase">ctc</span></label>' +
             '        <i class="d-none" id="err-ctc">*fill this</i>' +
             '    </div>' +
@@ -180,12 +180,12 @@ $(".skills-add-btn").click(function (event) {
         $(".skills-duplicate").append($(
             '<div class="row f-row my-5">' +
             '    <div class="col skills-col">' +
-            '        <input required type="text" id="skills" />' +
+            '        <input type="text" id="skills" name="skills[]"/>' +
             '        <label>skills</label>' +
             '        <i class="d-none">*fill this</i>' +
             '    </div>' +
             '    <div class="col yip-col">' +
-            '        <input required type="text" id="yip" />' +
+            '        <input type="text" id="yip" name="yip[]"/>' +
             '        <label>years <span class="text-lowercase">in practice</span></label>' +
             '        <i class="d-none" id="err-yip">*fill this</i>' +
             '    </div>' +

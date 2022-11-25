@@ -25,7 +25,7 @@ function cgpaValidation() {
     // let form = document.getElementById('yog-col')
     let cgpa = document.getElementById('cgpa').value
     let text = document.getElementById('err-cgpa')
-    let pattern = /^([1-9]([0-9])?|0)(\.[0-9]{1,2})?$/
+    let pattern = /^([1-9]([0-9])?|0)(\.[0-9]{1,3})?$/
 
     if (cgpa.match(pattern)) {
         text.innerHTML = "valid"
@@ -74,7 +74,7 @@ $(".second").click(function (event) {
     }
     else if (($yog != "" && !isYogValid) || ($cgpa != "" && !isCgpaValid)) {
         var yogregex = /^\d{4}$/;
-        var cgparegex = /(^[0-8][.][0-9][0-9]$)|(^\d{3}[%]?$)/;
+        var cgparegex = /(^[0-8][.][0-9][0-9]$)|(^\d{3}?[%]?$)/;
         if (yogregex.test($yog)) {
             isYogValid = true;
             $("#err-yog").html("valid");
@@ -157,9 +157,14 @@ $(".clg-add-btn").click(function (event) {
         $(".col i").addClass("d-none");
         $(".yog-col i").removeClass("d-none");
     }
-    else if ($yog != "" && !isYogValid) {
-        var regex = /^\d{4}$/;
-        if (regex.test($yog)) {
+    else if ($cgpa == "") {
+        $(".col i").addClass("d-none");
+        $(".cgpa-col i").removeClass("d-none");
+    }
+    else if (($yog != "" && !isYogValid) || ($cgpa != "" && !isCgpaValid)) {
+        var yogregex = /^\d{4}$/;
+        var cgparegex = /(^[0-8][.][0-9][0-9]$)|(^\d{3}[%]?$)/;
+        if (yogregex.test($yog)) {
             isYogValid = true;
             $("#err-yog").html("valid");
         } else {
@@ -167,14 +172,7 @@ $(".clg-add-btn").click(function (event) {
             $(".col i").addClass("d-none");
             $(".yog-col i").removeClass("d-none");
         }
-    }
-    else if ($cgpa == "") {
-        $(".col i").addClass("d-none");
-        $(".cgpa-col i").removeClass("d-none");
-    }
-    else if ($cgpa != "" && !isCgpaValid) {
-        var regex = /(^[0-10][.][0-9][0-9]$)|(^\d{2}[%]?$)/;
-        if (regex.test($cgpa)) {
+        if (cgparegex.test($cgpa)) {
             isCgpaValid = true;
             $("#err-cgpa").html("valid");
         } else {
@@ -185,30 +183,31 @@ $(".clg-add-btn").click(function (event) {
     }
     else {
         $(".degree-duplicate").append($(
-            '<div class="row f-row mt-5">' +
-            '<div class= "col degree-col">' +
-            '<input required type="text" id="degree" name="degree[]" />' +
-            '<label>degree <span class="req">&#42;</span></label>' +
-            '<i class="d-none">*fill this</i>' +
-            '</div >' +
-            '<div class="col college-col">' +
-            '<input required type="text" id="college" />' +
-            '<label>college <span class="req">&#42;</span></label>' +
-            '<i class="d-none">*fill this</i>' +
-            '</div>' +
-            '</div >' +
-            ' <div class="row f-row my-5">' +
-            ' <div class="col yog-col">' +
-            '<input required type="text" id="yog" />' +
-            ' <label>year <span class="text-lowercase">of</span> graduation <span class="req">&#42;</span></label>' +
-            '<i class="d-none" id="err-yog">*fill this</i>' +
-            ' </div>' +
-            ' <div class="col cgpa-col">' +
-            '<input required type="text" id="cgpa" />' +
-            '<label><span class="text-uppercase">cgpa</span> / percentage <span class="req">&#42;</span></label>' +
-            '<i class="d-none" id="err-cgpa">*fill this</i>' +
-            ' </div>' +
-            '</div>'));
+            '         <div class="row f-row mt-5">' +
+            '         <div class="col degree-col">' +
+            '             <input type="text" id="degree" name="degree[]" />' +
+            '             <label>degree <span class="req">&#42;</span></label>' +
+            '             <i class="d-none">*fill this</i>' +
+            '         </div>' +
+            '         <div class="col college-col">' +
+            '             <input type="text" id="college" name="college[]" />' +
+            '             <label>college <span class="req">&#42;</span></label>' +
+            '             <i class="d-none">*fill this</i>' +
+            '         </div>' +
+            '     </div>' +
+            '     <div class="row f-row my-5">' +
+            '         <div class="col yog-col">' +
+            '             <input type="" id="yog" name="yog[]" onkeydown="yogValidation()" />' +
+            '             <label>year <span class="text-lowercase">of</span> graduation <span class="req">&#42;</span></label>' +
+            '             <i class="d-none" id="err-yog">*fill this</i>' +
+            '         </div>' +
+            '         <div class="col cgpa-col">' +
+            '             <input type="text" id="cgpa" name="cgpa[]" onkeydown="cgpaValidation()" />' +
+            '             <label><span class="text-uppercase">cgpa</span> / percentage <span class="req">&#42;</span></label>' +
+            '             <i class="d-none" id="err-cgpa">*fill this</i>' +
+            '         </div>' +
+            '     </div>'
+        ));
         $(".degree-duplicate").css("overflow-y", "scroll");
     }
     event.preventDefault();
