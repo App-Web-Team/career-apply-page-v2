@@ -1,3 +1,5 @@
+var isYogValid = false;
+
 function yogValidation() {
     console.log("yog");
     $(".yog-col i").removeClass('d-none');
@@ -10,6 +12,7 @@ function yogValidation() {
         text.innerHTML = "valid"
         text.style.color = 'var(--secondary-color)'
     } else {
+        isYogValid = false;
         text.innerHTML = "not valid"
         text.style.color = 'var(--secondary-color)'
     }
@@ -43,7 +46,7 @@ function yogValidation() {
 
 
 
-var isYogValid = false;
+
 // var isCgpaValid = false;
 
 $(".second").click(function (event) {

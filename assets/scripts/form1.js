@@ -1,3 +1,7 @@
+var isValid = false;
+var isEmailValid = false;
+var isPinValid = false;
+
 function emailValidation() {
     $(".email-col i").removeClass('d-none');
     let form = document.getElementById('email-col')
@@ -9,6 +13,7 @@ function emailValidation() {
         text.innerHTML = "valid"
         text.style.color = 'var(--secondary-color)'
     } else {
+        isEmailValid = false;
         text.innerHTML = "not valid"
         text.style.color = 'var(--secondary-color)'
     }
@@ -34,6 +39,8 @@ function phNoValidation() {
     } else {
         // form.classList.remove('valid')
         // form.classList.add('invalid')
+        isValid = false;
+        // console.log(typeof isValid);
         text.innerHTML = "not valid"
         text.style.color = 'var(--secondary-color)'
     }
@@ -48,9 +55,7 @@ function phNoValidation() {
 
 
 
-var isValid = false;
-var isEmailValid = false;
-var isPinValid = false;
+
 
 $(".first").click(function (event) {
     var $fname = $("#fname").val();

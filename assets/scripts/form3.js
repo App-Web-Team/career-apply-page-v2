@@ -1,3 +1,6 @@
+// var isCtcValid = false;
+var isYipValid = false;
+
 function yipValidation() {
     console.log("yip");
     $(".yip-col i").removeClass('d-none');
@@ -10,6 +13,7 @@ function yipValidation() {
         text.innerHTML = "valid"
         text.style.color = 'var(--secondary-color)'
     } else {
+        isYipValid = false;
         text.innerHTML = "not valid"
         text.style.color = 'var(--secondary-color)'
     }
@@ -20,8 +24,7 @@ function yipValidation() {
     }
 }
 
-var isCtcValid = false;
-var isYipValid = false;
+
 
 $(".third").click(function (event) {
 
@@ -120,17 +123,17 @@ $(".experience-add-btn").click(function (event) {
         $(".col i").addClass("d-none");
         $(".ctc-col i").removeClass("d-none");
     }
-    else if ($ctc != "" && !isCtcValid) {
-        var regex = /^[0-9]*$/;
-        if (regex.test($ctc)) {
-            isCtcValid = true;
-            $("#err-ctc").html("valid");
-        } else {
-            $("#err-ctc").html("not valid");
-            $(".col i").addClass("d-none");
-            $(".ctc-col i").removeClass("d-none");
-        }
-    }
+    // else if ($ctc != "" && !isCtcValid) {
+    //     var regex = /^[0-9]*$/;
+    //     if (regex.test($ctc)) {
+    //         isCtcValid = true;
+    //         $("#err-ctc").html("valid");
+    //     } else {
+    //         $("#err-ctc").html("not valid");
+    //         $(".col i").addClass("d-none");
+    //         $(".ctc-col i").removeClass("d-none");
+    //     }
+    // }
     else {
         $(".experience-duplicate").append($(
             '<div class="row f-row mt-5">' +

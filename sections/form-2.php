@@ -34,7 +34,7 @@
                 <i class="d-none" id="err-yog">*fill this</i>
             </div>
             <div class="col cgpa-col">
-                <input type="text" id="cgpa" name="cgpa[]" onkeydown="cgpaValidation()" />
+                <input type="text" id="cgpa" name="cgpa[]" />
                 <label><span class="text-uppercase">cgpa</span> / percentage <span class="req">&#42;</span></label>
                 <i class="d-none" id="err-cgpa">*fill this</i>
             </div>
