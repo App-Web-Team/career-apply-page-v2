@@ -16,7 +16,7 @@
                 resume upload
                 <i class="fa-solid fa-arrow-up-from-bracket"></i>
             </label>
-            <input class="not-apply custom-style d-none" type="file" id="myFile" name="myFile" accept=".pdf, .docx">
+            <input class="not-apply custom-style d-none" type="file" id="myFile" name="myFile" accept=".pdf, .docx" required>
             <p>Please upload only pdf & docx</p>
             <i class="d-none" id="err-file">*file not uploaded</i>
             <i class="d-none" id="succ-file">file uploaded successfully</i>
@@ -24,14 +24,14 @@
     </div>
     <div class="row f-row mt-4">
         <div class="form-check mt-3 mb-3 ml-3 text-left">
-            <input class="form-check-input not-apply" type="checkbox" value="" id="flexCheckDefault">
+            <input class="form-check-input not-apply" type="checkbox" value="" id="flexCheckDefault" required>
             <label class="form-check-label ml-3 not-apply" for="flexCheckDefault">
                 I agree to the “TERMS & CONDITIONS” and also mention that the above mentioned details are true.
             </label>
         </div>
     </div>
     <div class="text-center">
-        <button class="last next" type="submit">Save & Proceed</button>
+        <button class="last next" type="submit" id="last-btn">Save & Proceed</button>
     </div>
 
 </div>
