@@ -18,12 +18,12 @@
     </div>
     <div class="row f-row my-5">
         <div class="col ph-col" id="ph-col">
-            <input  type="" name="phNo" id="phNo" onkeydown="phNoValidation()"/>
+            <input  type="" name="phNo" id="phNo" onkeydown=""/>
             <label>Phone No. <span class="req">&#42;</span></label>
             <i class="d-none" id="err">*fill this</i>
         </div>
         <div class="col email-col" id="email-col">
-            <input  type="email" id="email" name="email" onkeydown="emailValidation()"/>
+            <input  type="email" id="email" name="email" onkeydown=""/>
             <label>Email <span class="req">&#42;</span></label>
             <i class="d-none" id="err-email">*fill this</i>
         </div>

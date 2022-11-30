@@ -29,7 +29,7 @@
         </div>
         <div class="row f-row my-5">
             <div class="col yog-col">
-                <input type="" id="yog" name="yog[]" onkeydown="yogValidation()" />
+                <input type="" id="yog" name="yog[]" onkeydown="" />
                 <label>year <span class="text-lowercase">of</span> graduation <span class="req">&#42;</span></label>
                 <i class="d-none" id="err-yog">*fill this</i>
             </div>
