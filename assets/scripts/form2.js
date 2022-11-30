@@ -1,5 +1,3 @@
-var isYogValid = false;
-
 function yogValidation() {
     console.log("yog");
     $(".yog-col i").removeClass('d-none');
@@ -119,7 +117,8 @@ $(".second").click(function (event) {
     //     $(".col i").addClass("d-none");
     //     $(".pb-col i").removeClass("d-none");
     // }
-    else {
+    if (isYogValid) {
+        isYogValid = false;
         $(".col i").addClass("d-none");
 
         $(".side-icons button:nth-child(1)").removeClass("active");
@@ -184,7 +183,8 @@ $(".clg-add-btn").click(function (event) {
         //     $(".cgpa-col i").removeClass("d-none");
         // }
     }
-    else {
+    if (isYogValid) {
+        $(".col i").addClass("d-none");
         $(".degree-duplicate").append($(
             '         <div class="row f-row mt-5">' +
             '         <div class="col degree-col">' +
@@ -200,12 +200,12 @@ $(".clg-add-btn").click(function (event) {
             '     </div>' +
             '     <div class="row f-row my-5">' +
             '         <div class="col yog-col">' +
-            '             <input type="" id="yog" name="yog[]" onkeydown="yogValidation()" />' +
+            '             <input type="" id="yog" name="yog[]"  />' +
             '             <label>year <span class="text-lowercase">of</span> graduation <span class="req">&#42;</span></label>' +
             '             <i class="d-none" id="err-yog">*fill this</i>' +
             '         </div>' +
             '         <div class="col cgpa-col">' +
-            '             <input type="text" id="cgpa" name="cgpa[]" onkeydown="cgpaValidation()" />' +
+            '             <input type="text" id="cgpa" name="cgpa[]"  />' +
             '             <label><span class="text-uppercase">cgpa</span> / percentage <span class="req">&#42;</span></label>' +
             '             <i class="d-none" id="err-cgpa">*fill this</i>' +
             '         </div>' +
@@ -215,3 +215,49 @@ $(".clg-add-btn").click(function (event) {
     }
     event.preventDefault();
 });
+
+
+
+$(".certificate-add-btn").click(function (event) {
+    var $certifications = $("#certifications").val();
+    var $year = $("#year").val();
+    var $pb = $("#pb").val();
+
+    if ($certifications == "") {
+        $(".col i").addClass("d-none");
+        $(".certifications-col i").removeClass("d-none");
+    }
+    else if ($year == "") {
+        $(".col i").addClass("d-none");
+        $(".year-col i").removeClass("d-none");
+    }
+    else if ($pb == "") {
+        $(".col i").addClass("d-none");
+        $(".pb-col i").removeClass("d-none");
+    }
+    else {
+        $(".certifications-duplicate").append($(
+            '<div class="row f-row my-5">' +
+            '    <div class="col certifications-col">' +
+            '        <input   type="text" id="certifications" name="certifications[]" />' +
+            '        <label>certifications</label>' +
+            '        <i class="d-none">*fill this</i>' +
+            '    </div>' +
+            '    <div class="col year-col">' +
+            '        <input   type="text" id="year" name="year[]"/>' +
+            '        <label>year</label>' +
+            '        <i class="d-none">*fill this</i>' +
+            '    </div>' +
+            '    <div class="col pb-col">' +
+            '        <input   type="text" id="pb" name="pb[]"/>' +
+            '        <label>provided by</label>' +
+            '        <i class="d-none">*fill this</i>' +
+            '    </div>' +
+            '</div>'));
+        $(".certifications-duplicate").css("overflow-y", "scroll");
+    }
+    event.preventDefault();
+});
+
+
+

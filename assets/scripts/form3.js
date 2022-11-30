@@ -1,5 +1,5 @@
 // var isCtcValid = false;
-var isYipValid = false;
+
 
 function yipValidation() {
     console.log("yip");
@@ -82,7 +82,8 @@ $(".third").click(function (event) {
             $(".yip-col i").removeClass("d-none");
         }
     }
-    else {
+    if (isYipValid) {
+        isYipValid = false;
         $(".col i").addClass("d-none");
 
         $(".side-icons button:nth-child(1)").removeClass("active");

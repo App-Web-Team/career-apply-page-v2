@@ -1,5 +1,16 @@
+var isValid = false;
+var isEmailValid = false;
+var isPinValid = false;
+var isYogValid = false;
+var isYipValid = false;
 
 $(".zero").click(function (event) {
+
+    isValid = false;
+    isEmailValid = false;
+    isPinValid = false;
+    isYogValid = false;
+    isYipValid = false;
 
     $(".side-icons > button:first").addClass("active");
     $(".side-icons > button:nth-child(2)").removeClass("active");
@@ -24,50 +35,6 @@ $(".zero").click(function (event) {
 
 
 
-
-
-
-
-$(".certificate-add-btn").click(function (event) {
-    var $certifications = $("#certifications").val();
-    var $year = $("#year").val();
-    var $pb = $("#pb").val();
-
-    if ($certifications == "") {
-        $(".col i").addClass("d-none");
-        $(".certifications-col i").removeClass("d-none");
-    }
-    else if ($year == "") {
-        $(".col i").addClass("d-none");
-        $(".year-col i").removeClass("d-none");
-    }
-    else if ($pb == "") {
-        $(".col i").addClass("d-none");
-        $(".pb-col i").removeClass("d-none");
-    }
-    else {
-        $(".certifications-duplicate").append($(
-            '<div class="row f-row my-5">' +
-            '    <div class="col certifications-col">' +
-            '        <input required type="text" id="certifications" />' +
-            '        <label>certifications</label>' +
-            '        <i class="d-none">*fill this</i>' +
-            '    </div>' +
-            '    <div class="col year-col">' +
-            '        <input required type="text" id="year" />' +
-            '        <label>year</label>' +
-            '        <i class="d-none">*fill this</i>' +
-            '    </div>' +
-            '    <div class="col pb-col">' +
-            '        <input required type="text" id="pb" />' +
-            '        <label>provided by</label>' +
-            '        <i class="d-none">*fill this</i>' +
-            '    </div>' +
-            '</div>'));
-        $(".certifications-duplicate").css("overflow-y", "scroll");
-    }
-    event.preventDefault();
-});
 
 
 

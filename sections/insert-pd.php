@@ -90,6 +90,13 @@
         $cgpa = $_POST['cgpa'];
         $cgpas = implode(",", $cgpa);
 
+        $certifications = $_POST['certifications'];
+        $certificationss = implode(",", $certifications);
+        $year = $_POST['year'];
+        $years = implode(",", $year);
+        $pb = $_POST['pb'];
+        $pbs = implode(",", $pb);
+
 
         // $coldDrinks = $_POST['colddrinks'];
         foreach ($yog as $eachYog) {
@@ -143,7 +150,7 @@
         // Performing insert query execution
         // here our table name is college
         $sql = "INSERT INTO pd (fname, lname, phNo, email, address, state, pincode, degree, college, yog, cgpa, certifications, year, pb, designation, company, experience, ctc, skills, yip, eSalary, ePosition, myFile)
-        VALUES ('$first_name', '$last_name', '$phNo', '$email', '$address', '$state', '$pincode','$degrees', '$colleges', '$yogs', '$cgpas', '$certifications', '$year', '$pb', '$designations', '$companys', '$experiences', '$ctcs', '$skillss', '$yips', '$eSalary', '$ePosition', '$newImageName')";
+        VALUES ('$first_name', '$last_name', '$phNo', '$email', '$address', '$state', '$pincode','$degrees', '$colleges', '$yogs', '$cgpas', '$certificationss', '$years', '$pbs', '$designations', '$companys', '$experiences', '$ctcs', '$skillss', '$yips', '$eSalary', '$ePosition', '$newImageName')";
 
 
         if (mysqli_query($conn, $sql)) {

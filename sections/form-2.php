@@ -50,17 +50,17 @@
     <div class="certifications-duplicate">
         <div class="row f-row my-5">
             <div class="col certifications-col">
-                <input type="text" id="certifications" name="certifications" />
+                <input type="text" id="certifications" name="certifications[]" />
                 <label>certifications</label>
                 <i class="d-none">*fill this</i>
             </div>
             <div class="col year-col">
-                <input type="text" id="year" name="year" />
+                <input type="text" id="year" name="year[]" />
                 <label>year</label>
                 <i class="d-none">*fill this</i>
             </div>
             <div class="col pb-col">
-                <input type="text" id="pb" name="pb" />
+                <input type="text" id="pb" name="pb[]" />
                 <label>provided by</label>
                 <i class="d-none">*fill this</i>
             </div>

@@ -1,7 +1,3 @@
-var isValid = false;
-var isEmailValid = false;
-var isPinValid = false;
-
 function emailValidation() {
     $(".email-col i").removeClass('d-none');
     let form = document.getElementById('email-col')
@@ -58,6 +54,7 @@ function phNoValidation() {
 
 
 $(".first").click(function (event) {
+    isYipValid = false;
     var $fname = $("#fname").val();
     var $lname = $("#lname").val();
     var $phNo = $("#phNo").val();
@@ -85,9 +82,11 @@ $(".first").click(function (event) {
     else if (($phNo != "" && !isValid) || ($email != "" && !isEmailValid)) {
         var phregex = /^(0|91)?[0-9]{10}$/
         if (phregex.test($phNo)) {
+            console.log("phno valid");
             isValid = true;
             $("#err").html("valid");
         } else {
+            isValid = false;
             $("#err").html("not valid");
             $(".col i").addClass("d-none");
             $(".ph-col i").removeClass("d-none");
@@ -95,9 +94,11 @@ $(".first").click(function (event) {
         if ($email != "" && !isEmailValid) {
             var emailregex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
             if (emailregex.test($email)) {
+                console.log("email valid");
                 isEmailValid = true;
                 $("#err-email").html("valid");
             } else {
+                isEmailValid = false;
                 $("#err-email").html("not valid");
                 $(".col i").addClass("d-none");
                 $(".email-col i").removeClass("d-none");
@@ -123,6 +124,8 @@ $(".first").click(function (event) {
     else if ($state == "") {
         $(".col i").addClass("d-none");
         $(".state-col i").removeClass("d-none");
+    } else {
+        console.log("phno valid");
     }
     // else if ($pincode == "") {
     //     $(".col i").addClass("d-none");
@@ -139,7 +142,8 @@ $(".first").click(function (event) {
     //         $(".pincode-col i").removeClass("d-none");
     //     }
     // }
-    else {
+    if (isValid && isEmailValid) {
+        console.log("both are valid");
         $(".col i").addClass("d-none");
 
         $(".fname-col i").addClass("d-none");
