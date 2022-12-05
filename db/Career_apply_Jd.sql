@@ -1,5 +1,5 @@
-CREATE TABLE Candidate_details (
-    id INT NOT NULL,
+CREATE TABLE Career_apply_Jd (
+    id INT NOT NULL AUTO_INCREMENT,
     fname varchar(255),
     lname varchar(255),
     phNo varchar(255),

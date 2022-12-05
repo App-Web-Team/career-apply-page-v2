@@ -19,6 +19,7 @@
             <input class="not-apply custom-style d-none" type="file" id="myFile" name="myFile" accept=".pdf, .docx" required>
             <p>Please upload only pdf & docx</p>
             <i class="d-none" id="err-file">*file not uploaded</i>
+            <i class="d-none" id="err-file-size">size must be less than 1mb</i>
             <i class="d-none" id="succ-file">file uploaded successfully</i>
         </div>
     </div>

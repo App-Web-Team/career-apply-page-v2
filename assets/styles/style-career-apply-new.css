@@ -37,7 +37,6 @@
     .side-icons button:hover {
         background-color: rgba(255, 255, 255, .5) !important;
         border-radius: 20px 0px 0px 20px;
-        ;
     }
 }
 
@@ -98,46 +97,46 @@
 /* jquery styling */
 
 .form-1-move-down {
-    transform: translateY(600px);
+    transform: translateY(37.5rem);
 }
 
 .form-1-move-up {
-    transform: translateY(-600px);
+    transform: translateY(-37.5rem);
 }
 
 .form-2-move-up {
-    transform: translateY(-600px);
+    transform: translateY(-37.5rem);
 }
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
     .form-2-move-up {
-        transform: translateY(-615px);
+        transform: translateY(-38.438rem);
     }
 }
 
 .form-3-move-up {
-    transform: translateY(-1178px);
+    transform: translateY(-73.625rem);
 }
 
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
     .form-3-move-up {
-        transform: translateY(-1210px)
+        transform: translateY(-75.625rem)
     }
 }
 
 .form-4-move-up {
-    transform: translateY(-1720px);
+    transform: translateY(-107.5rem);
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 36rem) {
 
     .form-3-move-up {
-        transform: translateY(-1155px);
+        transform: translateY(-72.188rem);
     }
 
     .form-4-move-up {
-        transform: translateY(-1710px);
+        transform: translateY(-106.875);
     }
 
 }
@@ -303,7 +302,7 @@ form-check-input {
     /* top: -100%; */
 }
 
-#err-file {
+#err-file, #err-file-size {
     color: var(--secondary-color);
 }
 #succ-file {
