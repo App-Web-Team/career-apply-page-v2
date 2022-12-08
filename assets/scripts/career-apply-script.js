@@ -3,6 +3,7 @@ var isEmailValid = false;
 var isPinValid = false;
 var isYogValid = false;
 var isYipValid = false;
+var isFileValid = false;
 
 $(".zero").click(function (event) {
 
